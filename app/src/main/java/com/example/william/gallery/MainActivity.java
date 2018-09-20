@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.graphics.Bitmap;
 
-
 public class MainActivity extends AppCompatActivity {
 
     public class imageAdaptor extends BaseAdapter
@@ -48,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
             photo.image.setImageBitmap(null);
             new AsyncTask<imageContainer, Void, Bitmap>()
             {
+<<<<<<< HEAD
 
+
+>>>>>>> 88666b0d6ed08a3e656ef8ee4390b081b49bb558
             }
             return convertView;
         }
