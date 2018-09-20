@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             photo.image.setImageBitmap(null);
             new AsyncTask<imageContainer, Void, Bitmap>()
             {
-                
+
             }
             return convertView;
         }
