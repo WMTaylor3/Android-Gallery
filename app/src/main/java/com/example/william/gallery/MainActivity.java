@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         class imageContainer
         {
             int position;
-            ImageView image;
+            ImageView thumbnail;
         }
 
         //Required overrides for extension of BaseAdaptor
@@ -38,18 +38,29 @@ public class MainActivity extends AppCompatActivity {
             if (convertView == null) {
                 convertView = getLayoutInflater().inflate(R.layout.photo, viewGroup, false);
                 photo = new imageContainer();
-                photo.image = convertView.findViewById(R.id.photo);
+                photo.thumbnail = convertView.findViewById(R.id.photo);
                 convertView.setTag(photo);
             } else {
                 photo = (imageContainer) convertView.getTag();
             }
             photo.position = i;
-            photo.image.setImageBitmap(null);
+            photo.thumbnail.setImageBitmap(null);
             new AsyncTask<imageContainer, Void, Bitmap>()
             {
 <<<<<<< HEAD
 
+=======
+                private imageContainer photo;
+                @Override
+                protected Bitmap doInBackground(imageContainer... params)
+                {
+                    photo = params[0];
+                    Bitmap bmp = null;
+                    try
+                    {
 
+                    }
+                }
 >>>>>>> 88666b0d6ed08a3e656ef8ee4390b081b49bb558
             }
             return convertView;
